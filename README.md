@@ -54,3 +54,4 @@ WORKDIR /app
 CMD ["node", "index.js"]
 ```
 ![alt text](https://training.play-with-docker.com/images/ops-images-dockerfile.svg)
+Build image: ```docker image build -t node:v0.1```
