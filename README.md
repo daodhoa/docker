@@ -43,3 +43,14 @@ To see changes in our container: ```docker container diff container_id```
 To create our own image: ```docker container commit container_id```
 Then, when we list all images: ```docker image ls``` we will see the image has no tag, no repository, so we should make it by ```docker image tag <IMAGE_ID> ourfiglet```
 Now, ```docker image ls``` we should see the image with repository ```ourfiglet```
+
+### Image creation with Dockerfile
+Dockerfile (nodejs)
+```
+FROM alpine
+RUN apk update && apk add nodejs
+COPY . /app
+WORKDIR /app
+CMD ["node", "index.js"]
+```
+![alt text](https://training.play-with-docker.com/images/ops-images-dockerfile.svg)
